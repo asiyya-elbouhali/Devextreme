@@ -1,0 +1,12 @@
+<div class="ml-9">
+    <h2>{{faceSnap.title}}</h2>
+    <p>{{9745648.89 |currency:'MAD': 'code' }}</p>
+    <p>Mise en ligne   {{faceSnap.createdDate | date:'le d MMMM yyyy'}}</p>
+    <img [src]="faceSnap.imageUrl" [alt]="title" class="w-52" >
+    <p>{{faceSnap.description}}</p>
+    <p *ngIf="faceSnap.location"> Photo prise à : {{faceSnap.location}}</p>
+    <p>
+        <button (click)="onAddSnap()">{{buttonText}}</button>
+       <span> {{faceSnap.snaps}} snaps </span>
+    </p>
+    </div>
